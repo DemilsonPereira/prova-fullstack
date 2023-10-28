@@ -71,8 +71,12 @@
 * Com a aplicação em execução você pode consumir as seguintes rotas:  
     <br />
 
+    * Rotas de Autenticação
+
+    <strong><font color="green">**router.post('api/sessions')**</font></strong>  <br />       - 
+    Rota de Login
+
     * Rotas de Funcionários
-     
 
     <strong><font color="green">**router.post('api/users')**</font></strong>  <br />       - 
     Rota para criar um funcionário
