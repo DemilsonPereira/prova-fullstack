@@ -78,10 +78,11 @@
 
     <br />
 
-    * Rotas de Funcionários
+    * Rota de Funcionários
 
     <strong><font color="green">**router.post('api/users')**</font></strong>  <br />       - 
     Rota para criar um funcionário
+    <br />
 
     <strong><font color="green">**router.get('api/users')**</font></strong> <br />         - 
     Rota para listar todos funcionários
