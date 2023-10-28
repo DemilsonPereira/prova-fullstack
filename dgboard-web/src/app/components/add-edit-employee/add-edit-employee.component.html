@@ -1,0 +1,53 @@
+<div class="container">
+  <h2 mat-dialog-title>{{operation}} Funcionário</h2>
+  <mat-spinner *ngIf="loading" [diameter]="30"></mat-spinner>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="addEditEmployee()">
+
+  <mat-dialog-content>
+    <div class="row">
+      <div class="column">
+        <mat-form-field appearance="fill">
+          <mat-label>Nome</mat-label>
+          <input formControlName="name" matInput placeholder="Digite o nome">
+        </mat-form-field>
+      </div>
+
+
+      <div class="column">
+        <mat-form-field appearance="fill">
+          <mat-label>CPF</mat-label>
+          <input formControlName="cpf" matInput placeholder="Digite o CPF">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Cargo</mat-label>
+        <mat-select formControlName="position_id">
+          <mat-option *ngFor="let position of listPosition" [value]="position.id"> {{ position.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+
+    <div>
+      <mat-form-field>
+        <mat-label>Setor</mat-label>
+        <mat-select formControlName="sector_id">
+          <mat-option *ngFor="let sector of listSector" [value]="sector.id">{{ sector.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button type="button" mat-button (click)="cancelar()">Cancel</button>
+    <button [disabled]="form.invalid" type="submit" mat-button cdkFocusInitial>Salvar</button>
+  </mat-dialog-actions>
+
+</form>

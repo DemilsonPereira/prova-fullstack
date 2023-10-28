@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+    database:
+        image: postgres
+        container_name: database_digiboard
+        restart: always
+        ports:
+            - 5432:5432
+        environment:
+            - POSTGRES_USER=digiboard
+            - POSTGRES_PASSWORD=digiboard
+            - POSTGRES_DB=digiboard
+        volumes:
+            - pgdata:/data/postgres
+
+    app:
+        build: .
+        container_name: app_digiboard
+        restart: always
+        ports:
+            - 3333:3333
+            - 9229:9229
+        volumes:
+            - .:/usr/app
+        links:
+            - database
+        depends_on:
+            - database
+
+volumes:
+    pgdata:
+        driver: local

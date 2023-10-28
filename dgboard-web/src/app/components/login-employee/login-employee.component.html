@@ -1,0 +1,20 @@
+<div class="parent">
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+
+    <div class="signup">
+      <form>
+      </form>
+    </div>
+
+    <div class="login">
+      <form>
+        <label for="chk" aria-hidden="true">Digiboard</label>
+        <label for="chk" aria-hidden="true">Login</label>
+        <input type="cpf" name="cpf" [(ngModel)]="loginObj.cpf" placeholder="CPF" required="">
+        <input type="password" name="password" [(ngModel)]="loginObj.password" placeholder="Password" required="">
+        <button (click)="onLogin()">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
