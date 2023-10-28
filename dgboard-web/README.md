@@ -31,3 +31,32 @@ Execute `ng serve --o` para um servidor de desenvolvimento. Navegue até `http:/
 
 * login será pelo CPF: 151.151.151-11 
 * password: admin
+
+  <br />
+  <br />
+
+
+* Tela de Login
+  ![tela de login](https://github.com/DemilsonPereira/prova-fullstack/assets/33531233/39b84f9d-cddc-40ef-94f6-6e0c54998b45)
+  <br />
+  <br />
+
+* Tela Principal
+  ![tela principal](https://github.com/DemilsonPereira/prova-fullstack/assets/33531233/7e43d04a-49e5-4644-b948-44056192c601)
+  <br />
+  <br />
+
+* Tela de Cadastro
+  ![tela de cadastro](https://github.com/DemilsonPereira/prova-fullstack/assets/33531233/b892f1f0-795e-4b02-98b9-7c355b9cd631)
+  <br />
+  <br />
+
+* Tela de Editar
+  ![Tela de Editar](https://github.com/DemilsonPereira/prova-fullstack/assets/33531233/fd839a4f-1053-4e0f-aaec-116ee25d68a0)
+  <br />
+  <br />
+
+* Botão com ação de remover
+  ![Acao de remover usuário](https://github.com/DemilsonPereira/prova-fullstack/assets/33531233/1f43263b-3775-4db3-b48b-180a6c2963d7)
+  <br />
+  <br />
