@@ -87,11 +87,11 @@
     Rota para remove um funcionário
     <br />
 
-    <strong><font color="green">**router.delete('api/user/position/:id')**</font></strong> <br /> - 
+    <strong><font color="green">**router.delete('api/users/position/:id')**</font></strong> <br /> - 
     Rota para listar todos os funcionários por cargo - passar o ID do cargo
     <br />
 
-    <strong><font color="green">**router.delete('api/user/sector/:id')**</font></strong> <br /> - 
+    <strong><font color="green">**router.delete('api/users/sector/:id')**</font></strong> <br /> - 
     Rota para listar todos os funcionários por setor - passar o ID do setor
     <br />
     <br />
