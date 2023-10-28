@@ -73,8 +73,10 @@
 
     * Rotas de Autenticação
 
-    <strong><font color="green">**router.post('api/sessions')**</font></strong>  <br />       - 
-    Rota de Login
+    <strong><font color="green">**router.post('api/sessions')**</font></strong>  <br />
+    - Rota de Login
+
+    <br />
 
     * Rotas de Funcionários
 
