@@ -39,7 +39,7 @@ export class AuthService {
   }
 
   getToken(): string | null {
-    return localStorage.getItem('token'); // Supondo que o token esteja armazenado em localStorage
+    return sessionStorage.getItem('token'); // Supondo que o token esteja armazenado em localStorage
   }
 
   loginEmployee(data: any): Observable<any> {
@@ -52,7 +52,7 @@ export class AuthService {
       .subscribe(
         (res) => {
           if (res.token) {
-            console.log('res.token', res.token);
+            // console.log('res.token', res.token);
             sessionStorage.setItem('loginToken', res.token);
             this.router.navigateByUrl('/home');
           } else {
@@ -60,7 +60,7 @@ export class AuthService {
           }
         },
         (error) => {
-          console.error('Erro ao autenticar:', error);
+          // console.error('Erro ao autenticar:', error);
           alert(this.translateErrorMessage(error));
         }
       );
@@ -84,7 +84,7 @@ export class AuthService {
 
     if (token) {
       const payload = JSON.parse(atob(token.split('.')[1]));
-      console.log('payload', payload);
+      // console.log('payload', payload);
 
       const currentTime = Math.floor(Date.now() / 1000);
 

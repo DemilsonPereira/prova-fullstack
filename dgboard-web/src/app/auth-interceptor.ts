@@ -16,7 +16,7 @@ class AuthInterceptor implements HttpInterceptor {
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    console.log('AuthInterceptor está funcionando!');
+    // console.log('AuthInterceptor está funcionando!');
 
     const token = sessionStorage.getItem('loginToken');
     // console.log('interceptor', token);

@@ -29,12 +29,12 @@ export class AuthGuardService implements CanActivate {
     | boolean
     | UrlTree {
     const token = sessionStorage.getItem('loginToken');
-    console.log('AuthGuardService está sendo chamado.');
+    // console.log('AuthGuardService está sendo chamado.');
 
     if (token) {
       const payload = token.split('.')[1]; // O payload está na segunda parte do token
       const decodedPayload = JSON.parse(atob(payload));
-      console.log('Payload do Token:', decodedPayload);
+      // console.log('Payload do Token:', decodedPayload);
 
       const isExpired = this.jwtHelper.isTokenExpired(token);
 
