@@ -71,11 +71,18 @@
 * Com a aplicação em execução você pode consumir as seguintes rotas:  
     <br />
 
-    * Rotas de Funcionários
-     
+    * Rotas de Autenticação
+
+    <strong><font color="green">**router.post('api/sessions')**</font></strong>  <br />       - 
+    Rota Login
+
+    <br />
+
+    * Rota de Funcionários
 
     <strong><font color="green">**router.post('api/users')**</font></strong>  <br />       - 
     Rota para criar um funcionário
+    <br />
 
     <strong><font color="green">**router.get('api/users')**</font></strong> <br />         - 
     Rota para listar todos funcionários
@@ -87,11 +94,11 @@
     Rota para remove um funcionário
     <br />
 
-    <strong><font color="green">**router.delete('api/user/position/:id')**</font></strong> <br /> - 
+    <strong><font color="green">**router.delete('api/users/position/:id')**</font></strong> <br /> - 
     Rota para listar todos os funcionários por cargo - passar o ID do cargo
     <br />
 
-    <strong><font color="green">**router.delete('api/user/sector/:id')**</font></strong> <br /> - 
+    <strong><font color="green">**router.delete('api/users/sector/:id')**</font></strong> <br /> - 
     Rota para listar todos os funcionários por setor - passar o ID do setor
     <br />
     <br />
