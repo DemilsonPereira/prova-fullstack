@@ -11,7 +11,7 @@
       <form>
         <label for="chk" aria-hidden="true">Digiboard</label>
         <label for="chk" aria-hidden="true">Login</label>
-        <input type="cpf" name="cpf" [(ngModel)]="loginObj.cpf" placeholder="CPF" required="">
+        <input type="cpf" appMaskedInput name="cpf" [(ngModel)]="loginObj.cpf" placeholder="CPF" required="">
         <input type="password" name="password" [(ngModel)]="loginObj.password" placeholder="Password" required="">
         <button (click)="onLogin()">Login</button>
       </form>

@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,11 +9,23 @@ import { ListEmployeeComponent } from './components/list-employee/list-employee.
 import { AddEditEmployeeComponent } from './components/add-edit-employee/add-edit-employee.component';
 
 import { SharedModule } from './shared/shared.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginEmployeeComponent } from './components/login-employee/login-employee.component';
 import { RouterModule } from '@angular/router';
 import { AuthGuardService } from './auth-guard.service';
+import { MaskedInputDirective } from './masked-input.directive';
+import { JWT_OPTIONS, JwtModule } from '@auth0/angular-jwt';
+import { AuthInterceptor } from './auth-interceptor';
+import { GlobalAuthGuard } from './global-auth.guard';
+
+export function jwtOptionsFactory() {
+  return {
+    tokenGetter: () => {
+      return sessionStorage.getItem('loginToken');
+    },
+  };
+}
 
 @NgModule({
   declarations: [
@@ -21,6 +33,7 @@ import { AuthGuardService } from './auth-guard.service';
     ListEmployeeComponent,
     AddEditEmployeeComponent,
     LoginEmployeeComponent,
+    MaskedInputDirective,
   ],
   imports: [
     BrowserModule,
@@ -31,8 +44,22 @@ import { AuthGuardService } from './auth-guard.service';
     FormsModule,
     RouterModule,
     AppRoutingModule,
+    JwtModule.forRoot({
+      jwtOptionsProvider: {
+        provide: JWT_OPTIONS,
+        useFactory: jwtOptionsFactory,
+      },
+    }),
   ],
-  providers: [AuthGuardService],
+  providers: [
+    GlobalAuthGuard,
+    AuthGuardService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginEmployeeComponent } from './components/login-employee/login-employee.component';
 import { ListEmployeeComponent } from './components/list-employee/list-employee.component';
 import { AuthGuardService } from './auth-guard.service';
+import { GlobalAuthGuard } from './global-auth.guard';
+
 
 const routes: Routes = [
   {
@@ -16,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    canActivate: [AuthGuardService],
+    canActivate: [GlobalAuthGuard, AuthGuardService],
     component: ListEmployeeComponent,
   },
   {
