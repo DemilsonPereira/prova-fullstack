@@ -37,7 +37,12 @@ Execute `ng serve --o` para um servidor de desenvolvimento. Navegue até `http:/
 
 
 * Tela de Login
-  ![tela de login](https://github.com/DemilsonPereira/prova-fullstack/assets/33531233/39b84f9d-cddc-40ef-94f6-6e0c54998b45)
+  ![tela de login1](https://github.com/DemilsonPereira/prova-fullstack/assets/33531233/1cc9084f-9671-4349-a030-2a111099a789)
+  <br />
+  <br />
+
+* Tela de Login
+  ![tela de login2](https://github.com/DemilsonPereira/prova-fullstack/assets/33531233/69f04d07-0caa-4404-9dda-89ff1ca114c5)
   <br />
   <br />
 
