@@ -14,13 +14,13 @@
       <input matInput placeholder="Ex. Francisco" (keyup)="applyFilter($event)" #input autocomplete="off">
     </mat-form-field>
     <mat-form-field>
+      <mat-label>Filtro por cargo</mat-label>
+      <input matInput placeholder="Ex. Gerente" (keyup)="applyPositionFilter($event)" #inputPosition autocomplete="off">
+    </mat-form-field>
+    <mat-form-field>
       <mat-label>Filtro por setor</mat-label>
       <input matInput placeholder="Ex. Administração" (keyup)="applySectorFilter($event)" #inputSector
         autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Filtro por cargo</mat-label>
-      <input matInput placeholder="Ex. Gerente" (keyup)="applyPositionFilter($event)" #inputPosition autocomplete="off">
     </mat-form-field>
     <button mat-raised-button color="primary" (click)="openAddEditEmployee()">Cadastrar</button>
   </div>
